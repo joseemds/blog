@@ -1,12 +1,14 @@
 ---
 const title = "Font Pairing Made Simple";
+const title = "Understading LR(1) Parsers by writing a tree-sitter parser";
+import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title={title}>
 	<div>
-		<h3 class="font-bold text-center text-3xl">{title}</h3>
 		<article class="max-w-prose mx-auto p-8 text-xl">
+		<Title>{title}</Title>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. In arcu lorem,
 				cursus nec diam ut, elementum convallis arcu. Cras rutrum ante in
@@ -54,7 +56,5 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
-	h3 {
-		font-family: Karla;
 	}
 </style>
