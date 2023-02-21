@@ -5,6 +5,7 @@ specifiers:
   '@fontsource/inconsolata': ^4.5.10
   '@fontsource/karla': ^4.5.11
   astro: ^2.0.10
+  class-variance-authority: ^0.4.0
   tailwindcss: ^3.0.24
 
 dependencies:
@@ -12,6 +13,7 @@ dependencies:
   '@fontsource/inconsolata': 4.5.10
   '@fontsource/karla': 4.5.11
   astro: 2.0.10
+  class-variance-authority: 0.4.0
   tailwindcss: 3.2.7
 
 packages:
@@ -1049,6 +1051,15 @@ packages:
   /ci-info/3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /class-variance-authority/0.4.0:
+    resolution: {integrity: sha512-74enNN8O9ZNieycac/y8FxqgyzZhZbxmCitAtAeUrLPlxjSd5zA7LfpprmxEcOmQBnaGs5hYhiSGnJ0mqrtBLQ==}
+    peerDependencies:
+      typescript: '>= 4.5.5 < 5'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dev: false
 
   /cli-boxes/3.0.0:
