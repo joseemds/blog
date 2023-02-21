@@ -10,8 +10,8 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@fontsource/quattrocento": "^4.5.10",
-		"@fontsource/quattrocento-sans": "^4.5.10",
+		"@fontsource/inconsolata": "^4.5.10",
+		"@fontsource/karla": "^4.5.11",
 		"astro": "^2.0.10"
 	}
 }

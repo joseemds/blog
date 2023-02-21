@@ -1,13 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/quattrocento': ^4.5.10
-  '@fontsource/quattrocento-sans': ^4.5.10
+  '@fontsource/inconsolata': ^4.5.10
+  '@fontsource/karla': ^4.5.11
   astro: ^2.0.10
 
 dependencies:
-  '@fontsource/quattrocento': 4.5.10
-  '@fontsource/quattrocento-sans': 4.5.10
+  '@fontsource/inconsolata': 4.5.10
+  '@fontsource/karla': 4.5.11
   astro: 2.0.10
 
 packages:
@@ -542,12 +542,12 @@ packages:
     dev: false
     optional: true
 
-  /@fontsource/quattrocento-sans/4.5.10:
-    resolution: {integrity: sha512-r2aG37kqcsM4YZCmE6WyPHmMmYShvsc4LhRP5mx/k9BvCPmDaeIkQQ80ph6Bc3Kslc7TgJy8/LWI5snfyH4+Sw==}
+  /@fontsource/inconsolata/4.5.10:
+    resolution: {integrity: sha512-kShpiWE3RD4LH4YlZPbyE4VMt826DA7Ugw1jNJt54mxpP7nUsI9gflQOLWSJ9AMLkqPLpjza9iZkKRmU8Q7MOQ==}
     dev: false
 
-  /@fontsource/quattrocento/4.5.10:
-    resolution: {integrity: sha512-C1seOFxMpwDcZMbFGKZ7QFNVERK7pGlSrB7mtgXhCafsKsEMjs8++62nPHm9ZsN4uEPqtoW/XiNBgEKNX+Cklg==}
+  /@fontsource/karla/4.5.11:
+    resolution: {integrity: sha512-MpH+rW8V5v/mqEwoIrUTmGimY+GIyU5P23DmzYxWcTotosRLGWrg7XOjN4DtkpZuEv2LzHHZxOuFWbjRWL9JfQ==}
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
