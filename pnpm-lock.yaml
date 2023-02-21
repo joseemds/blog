@@ -1,9 +1,13 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@fontsource/quattrocento': ^4.5.10
+  '@fontsource/quattrocento-sans': ^4.5.10
   astro: ^2.0.10
 
 dependencies:
+  '@fontsource/quattrocento': 4.5.10
+  '@fontsource/quattrocento-sans': 4.5.10
   astro: 2.0.10
 
 packages:
@@ -537,6 +541,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@fontsource/quattrocento-sans/4.5.10:
+    resolution: {integrity: sha512-r2aG37kqcsM4YZCmE6WyPHmMmYShvsc4LhRP5mx/k9BvCPmDaeIkQQ80ph6Bc3Kslc7TgJy8/LWI5snfyH4+Sw==}
+    dev: false
+
+  /@fontsource/quattrocento/4.5.10:
+    resolution: {integrity: sha512-C1seOFxMpwDcZMbFGKZ7QFNVERK7pGlSrB7mtgXhCafsKsEMjs8++62nPHm9ZsN4uEPqtoW/XiNBgEKNX+Cklg==}
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
