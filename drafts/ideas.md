@@ -4,4 +4,7 @@
 - introduce parsing and treesitter
 - todo cli (modify config.fish) to show when a terminal is open (just like jonhoo) 
 - LR(1) parser interactive
+- LL(1) parser implementation
+- letreco discord bot
+- live patch website
 
