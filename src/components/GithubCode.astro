@@ -8,12 +8,14 @@ export type Props = {
 
 const { code, url } = Astro.props;
 
-
-const highlighter = await shiki.getHighlighter({ theme: "github-dark", langs: ["js", "rust"]});
-const tokens = highlighter.codeToThemedTokens(code, 'js')
+const highlighter = await shiki.getHighlighter({
+	theme: "github-dark",
+	langs: ["js", "rust"],
+});
+const tokens = highlighter.codeToThemedTokens(code, "js");
 const formattedCode = shiki.renderToHtml(tokens, {
-	bg: "rgb(22, 27, 34)"
-})
+	bg: "rgb(22, 27, 34)",
+});
 
 const [_https, _empty, _github, owner, repo, _blob, commitHash, ...path] =
 	url.split("/");
