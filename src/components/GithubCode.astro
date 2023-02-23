@@ -25,11 +25,11 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 ---
 
 <div
-	class="flex flex-col max-w-lg overflow-auto md:max-w-4xl mx-auto"
+	class="flex flex-col max-w-md md:max-w-4xl mx-auto"
 	style=`--start: ${startLine};`
 >
 	<div
-		class="border border-red-900 flex flex-row items-center p-2 gap-8 text-xl text-sky-50"
+		class="border border-red-900 flex flex-row itemd-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
 		style="background-color: #24292e; border-color: #30363d;"
 	>
 		<i class="ri-github-fill ri-xl"></i>
@@ -41,7 +41,7 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 	</div>
 	<div
 		set:html={formattedCode}
-		class="border"
+		class="border overflow-auto"
 		style="border-color: #30363d; background-color: rgb(22, 27, 34)"
 	/>
 </div>
