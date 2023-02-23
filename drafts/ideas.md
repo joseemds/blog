@@ -7,4 +7,5 @@
 - LL(1) parser implementation
 - letreco discord bot
 - live patch website
-
+- Finding the source (series? ) (Understanding how something works by untangle it source code) 
+	- Tree sitter generate
