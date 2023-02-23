@@ -32,11 +32,13 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 		class="border border-red-900 flex flex-row items-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
 		style="background-color: #24292e; border-color: #30363d;"
 	>
-		<i class="ri-github-fill ri-xl"></i>
+		<a href={url} target="_blank" rel="noreferrer noopener">
+			<i class="ri-github-fill ri-xl"></i>
+		</a>
 		<h4 class="text-blue-400 decoration-blue-500 underline">
-			<a href={url} target="_blank"
-				>{owner + "/" + repo + ":" + filename + "#" + commitHash}</a
-			>
+			<a href={url} target="_blank" rel="noreferrer noopener">
+				{owner + "/" + repo + ":" + filename + "#" + commitHash}
+			</a>
 		</h4>
 	</div>
 	<div
