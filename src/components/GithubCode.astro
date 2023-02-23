@@ -20,18 +20,19 @@ const formattedCode = shiki.renderToHtml(tokens, {
 const [_https, _empty, _github, owner, repo, _blob, commitHash, ...path] =
 	url.split("/");
 
-const [filename, _lineNumbers] = path.at(-1)?.split("#");
+const [filename, lineNumbers] = path.at(-1)?.split("#");
+const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 ---
 
 <div
-	class="flex flex-col max-w-4xl mx-auto"
-	style="background-color: rgb(22, 27, 34)"
+	class="flex flex-col max-w-lg overflow-auto md:max-w-4xl mx-auto"
+	style=`--start: ${startLine};`
 >
 	<div
 		class="border border-red-900 flex flex-row items-center p-2 gap-8 text-xl text-sky-50"
 		style="background-color: #24292e; border-color: #30363d;"
 	>
-		<i class="ri-github-fill block"></i>
+		<i class="ri-github-fill ri-xl"></i>
 		<h4 class="text-blue-400 decoration-blue-500 underline">
 			<a href={url} target="_blank"
 				>{owner + "/" + repo + ":" + filename + "#" + commitHash}</a
