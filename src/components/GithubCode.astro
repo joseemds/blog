@@ -1,5 +1,5 @@
 ---
-import shiki from "shiki";
+import { Code } from "astro/components";
 
 export type Props = {
 	url: string;
@@ -7,15 +7,6 @@ export type Props = {
 };
 
 const { code, url } = Astro.props;
-
-const highlighter = await shiki.getHighlighter({
-	theme: "github-dark",
-	langs: ["js", "rust"],
-});
-const tokens = highlighter.codeToThemedTokens(code, "js");
-const formattedCode = shiki.renderToHtml(tokens, {
-	bg: "rgb(22, 27, 34)",
-});
 
 const [_https, _empty, _github, owner, repo, _blob, commitHash, ...path] =
 	url.split("/");
@@ -26,14 +17,13 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 
 <div
 	class="flex flex-col max-w-md md:max-w-4xl mx-auto"
-	style=`--start: ${startLine};`
->
+	style=`--start: ${startLine};`>
 	<div
-		class="border border-red-900 flex flex-row items-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
+		class="border flex flex-row items-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
 		style="background-color: #24292e; border-color: #30363d;"
 	>
-		<a href={url} target="_blank" rel="noreferrer noopener">
-			<i class="ri-github-fill ri-xl"></i>
+		<a href={url} class="flex" target="_blank" rel="noreferrer noopener">
+			<i class="ri-github-fill ri-xl" />
 		</a>
 		<h4 class="text-blue-400 decoration-blue-500 underline">
 			<a href={url} target="_blank" rel="noreferrer noopener">
@@ -41,9 +31,5 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 			</a>
 		</h4>
 	</div>
-	<div
-		set:html={formattedCode}
-		class="border overflow-auto"
-		style="border-color: #30363d; background-color: rgb(22, 27, 34)"
-	/>
+	<Code code={code} lang="js" />
 </div>
