@@ -11,13 +11,13 @@ const { code, url } = Astro.props;
 const [_https, _empty, _github, owner, repo, _blob, commitHash, ...path] =
 	url.split("/");
 
-const [filename, lineNumbers] = path.at(-1)?.split("#");
+const [filename, lineNumbers] = path.at(-1)?.split("#")!;
 const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 ---
 
 <div
 	class="flex flex-col max-w-md md:max-w-4xl mx-auto"
-	style=`--start: ${startLine};`>
+	style={`--start: ${startLine}`}>
 	<div
 		class="border flex flex-row items-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
 		style="background-color: #24292e; border-color: #30363d;"
