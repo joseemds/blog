@@ -1,0 +1,16 @@
+---
+import { getCollection, getEntryBySlug } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+// 2. Query for the entry directly using the request slug
+const entry = await getEntryBySlug('blog', slug);
+// 3. (Optional) render the entry to HTML in the template
+const { Content } = await entry.render();
+---
+
+<Layout>
+	<div class="max-w-4xl mx-auto space-y-2">
+		<Content />
+	</div>
+</Layout>
