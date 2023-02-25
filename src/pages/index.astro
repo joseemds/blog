@@ -1,24 +1,54 @@
 ---
-import Title from '../components/Title.astro';
-import Layout from '../layouts/Layout.astro';
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const blogPosts = await getCollection("blog", ({ data }) => {
+	return data.draft !== true;
+});
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<Title>
-			Hello, I'm λdu.du
-		</Title>
+		<Title>Hello, I'm λdu.du</Title>
 		<div class="flex items-center justify-center gap-4">
-			<a href="https://github.com/joseemds" target="_blank" rel="noreferrer noopener">
-				<i class="ri-github-line ri-2x" />
+			<a
+				href="https://github.com/joseemds"
+				target="_blank"
+				rel="noreferrer noopener"
+			>
+				<i class="ri-github-line ri-2x"></i>
 			</a>
-			<a href="https://twitter.com/joseemds" target="_blank" rel="noreferrer noopener">
-				<i class="ri-mastodon-line ri-2x" />
+			<a
+				href="https://twitter.com/joseemds"
+				target="_blank"
+				rel="noreferrer noopener"
+			>
+				<i class="ri-mastodon-line ri-2x"></i>
 			</a>
-			<a href="https://twitter.com/joseemds" target="_blank" rel="noreferrer noopener">
-				<i class="ri-twitter-line ri-2x" />
+			<a
+				href="https://twitter.com/joseemds"
+				target="_blank"
+				rel="noreferrer noopener"
+			>
+				<i class="ri-twitter-line ri-2x"></i>
 			</a>
 		</div>
+
+		<ul>
+			{
+				blogPosts.map((blogPostEntry) => (
+					<li>
+						<a href={`/posts/${blogPostEntry.slug}`}>
+							{blogPostEntry.data.title}
+						</a>
+						<time datetime={blogPostEntry.data.publishDate.toISOString()}>
+							{blogPostEntry.data.publishDate.toDateString()}
+						</time>
+					</li>
+				))
+			}
+		</ul>
 	</main>
 </Layout>
 
