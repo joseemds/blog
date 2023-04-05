@@ -35,11 +35,11 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 			</a>
 		</div>
 
-		<ul>
+		<ul class="mt-16">
 			{
 				blogPosts.map((blogPostEntry) => (
-					<li>
-						<a href={`/posts/${blogPostEntry.slug}`}>
+					<li class="flex items-center justify-center flex-col">
+						<a class="text-lg" href={`/posts/${blogPostEntry.slug}`}>
 							{blogPostEntry.data.title}
 						</a>
 						<time datetime={blogPostEntry.data.publishDate.toISOString()}>
