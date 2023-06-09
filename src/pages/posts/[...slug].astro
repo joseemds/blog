@@ -1,6 +1,7 @@
 ---
 import { getCollection, getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import Title from "../../components/Title.astro";
 
 const { slug } = Astro.params;
 // 2. Query for the entry directly using the request slug
@@ -10,7 +11,10 @@ const { Content } = await entry.render();
 ---
 
 <Layout>
-	<div class="max-w-4xl mx-auto space-y-2">
-		<Content />
+	<div class="max-w-4xl mx-auto">
+		<Title>{entry?.data.title}</Title>
+		<div class="font-source-sans text-base md:text-lg p-6 space-y-4">
+			<Content />
+		</div>
 	</div>
 </Layout>

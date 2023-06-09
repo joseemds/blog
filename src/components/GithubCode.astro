@@ -19,8 +19,8 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 		class="flex flex-col max-w-md md:max-w-4xl mx-auto md:text-base"
 	style={`--start: ${startLine}`}>
 	<div
-		class="border-b-2 border-t  rounded-t-lg flex flex-row items-center p-2 gap-8 text-xl text-sky-50 whitespace-nowrap overflow-hidden"
-		style="background-color: #24292e; border-color: #30363d;"
+		class="border-b-2 border-t  rounded-t-lg flex flex-row items-center p-2 gap-8 text-base md:text-xl text-sky-50 whitespace-nowrap overflow-hidden"
+		style="background-color: #24292e; border-color: #30363d; font-family: 'Iosevka';"
 	>
 		<a href={url} class="flex" target="_blank" rel="noreferrer noopener">
 			<i class="ri-github-fill ri-xl" />
@@ -31,7 +31,7 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 			</a>
 		</h4>
 	</div>
-	<div class="rounded-b-lg overflow-hidden text-sm md:text-base" style="border-color: #30363d">
+	<div class="rounded-b-lg overflow-hidden text-sm md:text-base" style="border-color: #30363d; font-family: Iosevka;">
 		<Code	code={code} lang="js" />
 	</div>
 </div>
