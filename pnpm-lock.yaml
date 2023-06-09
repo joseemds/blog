@@ -23,9 +23,6 @@ dependencies:
   '@fontsource/iosevka':
     specifier: ^4.5.4
     version: 4.5.4
-  '@fontsource/quattrocento':
-    specifier: ^5.0.2
-    version: 5.0.2
   astro:
     specifier: ^2.6.1
     version: 2.6.1
@@ -685,10 +682,6 @@ packages:
 
   /@fontsource/iosevka@4.5.4:
     resolution: {integrity: sha512-S3rNmYP8EvjeyAJ8mwtt+9CZK8p5LdxYXpgv9lSBtHbRkwjcg8MbPs7vzWLRYs0R0MRmpvlLw864xvn3XKXclA==}
-    dev: false
-
-  /@fontsource/quattrocento@5.0.2:
-    resolution: {integrity: sha512-BbCGNHHH8DfL5QfbgLIMgoi5TJITu4y8bzfBWmMF492LrqpaML2iJg4FKdQEXKtP7gnxseV3RTDgHoqikR78WQ==}
     dev: false
 
   /@jridgewell/gen-mapping@0.3.3:
