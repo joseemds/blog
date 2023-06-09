@@ -13,6 +13,8 @@ const blogCollection = defineCollection({
   }),
 });
 
+export type Blog = z.infer<ReturnType<typeof blogCollection>>;
+
 export const collections = {
   blog: blogCollection,
 };

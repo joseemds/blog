@@ -7,11 +7,14 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"lint": "prettier ./src",
+		"format": "prettier --write src"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^0.17.2",
 		"@astrojs/tailwind": "^3.0.1",
+		"@astrojs/ts-plugin": "^1.0.7",
 		"@astrojs/vercel": "^3.1.3",
 		"@fontsource-variable/exo-2": "^5.0.3",
 		"@fontsource-variable/source-sans-3": "^5.0.3",
@@ -23,9 +26,5 @@
 	},
 	"devDependencies": {
 		"prettier": "^2.8.8"
-	},
-	"scripts": {
-		"lint": "prettier ./src",
-		"format": "prettier --write src"
 	}
 }
