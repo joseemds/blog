@@ -1,12 +1,20 @@
 ---
 import Layout from "./Layout.astro";
+import type { MarkdownLayoutProps } from "astro";
 
-const frontmatter = Astro.props;
+type Props = MarkdownLayoutProps<{
+	title: string;
+	tags: string;
+	draft: boolean;
+	publishDate: string;
+	editDate?: string;
+}>;
+
+const { frontmatter } = Astro.props;
 ---
 
-
 <Layout title={frontmatter.title}>
-	<article class="max-w-4xl mx-auto px-8 text-xl space-y-4">
-			<slot />
+	<article class="max-w-prose mx-auto px-8 text-lg space-y-4">
+		<slot />
 	</article>
 </Layout>

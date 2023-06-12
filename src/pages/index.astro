@@ -2,6 +2,7 @@
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
+import Spacer from "../components/Spacer.astro";
 
 const blogPosts = await getCollection("blog", ({ data }) => {
 	return data.draft !== true;
@@ -11,6 +12,7 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 <Layout title="Welcome to Astro.">
 	<main>
 		<Title>Hello, I'm λdu.du</Title>
+		<p class="text-center">I'm just an abstraction</p>
 		<div class="flex items-center justify-center gap-4">
 			<a
 				href="https://github.com/joseemds"
