@@ -1,0 +1,19 @@
+---
+import { Code } from "astro/components";
+
+export type Props = {
+	lang: string;
+	code: string;
+};
+
+const { code, lang } = Astro.props;
+
+---
+
+<div class="flex flex-col max-w-md md:max-w-4xl mx-auto md:text-base"
+	<div class="rounded-b-lg overflow-hidden text-sm md:text-base" style="border-color: #30363d; font-family: Iosevka;">
+		<p class="bg-gray-500">{lang}</p>
+		<Code	code={code} lang="js" />
+	</div>
+</div>
+

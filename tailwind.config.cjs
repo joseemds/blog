@@ -6,8 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['Karla', ...defaultTheme.fontFamily.sans],
-				'mono': ['Inconsolata', ...defaultTheme.fontFamily.sans],
+				'exo': ['"Exo 2 Variable"'],
+				'source-sans': ['"Source Sans 3 Variable"']
 			}
 
 		},

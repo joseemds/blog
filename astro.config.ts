@@ -9,9 +9,6 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
 
-
-
-
 // https://github.com/withastro/astro/issues/5357#issuecomment-1314219452
 const shikiResourcePaths = Object.keys(
 	import.meta.glob([
