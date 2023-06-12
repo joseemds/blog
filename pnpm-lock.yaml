@@ -8,6 +8,7 @@ specifiers:
   '@fontsource-variable/exo-2': ^5.0.3
   '@fontsource-variable/source-sans-3': ^5.0.3
   '@fontsource/iosevka': ^4.5.4
+  '@fontsource/source-serif-pro': ^5.0.3
   astro: ^2.6.1
   class-variance-authority: ^0.4.0
   prettier: ^2.8.8
@@ -22,6 +23,7 @@ dependencies:
   '@fontsource-variable/exo-2': 5.0.4
   '@fontsource-variable/source-sans-3': 5.0.4
   '@fontsource/iosevka': 4.5.4
+  '@fontsource/source-serif-pro': 5.0.3
   astro: 2.6.3
   class-variance-authority: 0.4.0
   shiki: 0.14.1
@@ -747,6 +749,10 @@ packages:
 
   /@fontsource/iosevka/4.5.4:
     resolution: {integrity: sha512-S3rNmYP8EvjeyAJ8mwtt+9CZK8p5LdxYXpgv9lSBtHbRkwjcg8MbPs7vzWLRYs0R0MRmpvlLw864xvn3XKXclA==}
+    dev: false
+
+  /@fontsource/source-serif-pro/5.0.3:
+    resolution: {integrity: sha512-aB5vTiNzixwrkMf8nSax7mHKsa5elWNwrFjMx0f9ZcaXARemWSfbohPhU1kQZLfTUhNQTzTAfRmAHPA/JPKqsw==}
     dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
