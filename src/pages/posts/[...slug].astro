@@ -2,7 +2,6 @@
 import type { Params } from 'astro';
 import { getEntryBySlug } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
-import MarkdownLayout from "../../layouts/MarkdownLayout.astro";
 
 import Title from "../../components/Title.astro";
 import type { Blog } from "../../content/config";
@@ -22,4 +21,4 @@ const { Content } = await entry!.render();
 			<Content />
 		</div>
 	</div>
-</MarkdownLayout>
+</Layout>
