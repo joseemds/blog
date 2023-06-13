@@ -6,6 +6,7 @@ specifiers:
   '@astrojs/ts-plugin': ^1.0.7
   '@astrojs/vercel': ^3.1.3
   '@fontsource-variable/exo-2': ^5.0.3
+  '@fontsource-variable/source-code-pro': ^5.0.4
   '@fontsource-variable/source-sans-3': ^5.0.3
   '@fontsource/iosevka': ^4.5.4
   '@fontsource/source-serif-pro': ^5.0.3
@@ -21,6 +22,7 @@ dependencies:
   '@astrojs/ts-plugin': 1.0.10
   '@astrojs/vercel': 3.1.3_astro@2.6.3
   '@fontsource-variable/exo-2': 5.0.4
+  '@fontsource-variable/source-code-pro': 5.0.4
   '@fontsource-variable/source-sans-3': 5.0.4
   '@fontsource/iosevka': 4.5.4
   '@fontsource/source-serif-pro': 5.0.3
@@ -741,6 +743,10 @@ packages:
 
   /@fontsource-variable/exo-2/5.0.4:
     resolution: {integrity: sha512-ZZMaTkDwSyOR876K8yStiJhYsdLgVR8OCLRRtjyACcYGud2qLcWl8ZCfVuRG439NigFHBaeK/YqOgsz5LRWGAA==}
+    dev: false
+
+  /@fontsource-variable/source-code-pro/5.0.4:
+    resolution: {integrity: sha512-q6QguRj/A4D/rfYVTDt632LBMZND+LnsN3ZPmtELxIvbv9rH9gbS7ep/S77iGOFBjEHasfHZh0vUBZCm8tEtCg==}
     dev: false
 
   /@fontsource-variable/source-sans-3/5.0.4:

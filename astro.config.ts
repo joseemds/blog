@@ -8,6 +8,7 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
+import mochaTheme from "./src/assets/themes/frappe.json"
 
 // https://github.com/withastro/astro/issues/5357#issuecomment-1314219452
 const shikiResourcePaths = Object.keys(
@@ -24,4 +25,7 @@ export default defineConfig({
 	adapter: vercel({
 		includeFiles: shikiResourcePaths,
 	}),
+	markdown: {
+		shikiConfig: { theme: mochaTheme}
+	}
 });
