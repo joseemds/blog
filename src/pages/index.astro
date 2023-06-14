@@ -4,9 +4,6 @@ import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 import Spacer from "../components/Spacer.astro";
 
-const blogPosts = await getCollection("blog", ({ data }) => {
-	return data.draft !== true;
-});
 ---
 
 <Layout title="λdu.du">
@@ -38,24 +35,6 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 				<i class="ri-twitter-line ri-2x"></i>
 			</a>
 		</div>
-
-		<ul class="mt-16">
-			{
-				blogPosts.map((blogPostEntry) => (
-					<li class="flex items-center justify-center flex-col">
-						<a
-							class="font-source-sans text-lg font-semibold"
-							href={`/posts/${blogPostEntry.slug}`}
-						>
-							{blogPostEntry.data.title}
-						</a>
-						<time datetime={blogPostEntry.data.publishDate.toISOString()}>
-							{blogPostEntry.data.publishDate.toDateString()}
-						</time>
-					</li>
-				))
-			}
-		</ul>
 	</main>
 </Layout>
 
