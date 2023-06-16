@@ -8,7 +8,7 @@ module.exports = {
 			fontFamily: {
 				'exo': ['"Exo 2 Variable"'],
 				'source-sans': ['"Source Sans 3 Variable"'],
-				'source-serif': ['"Source Serif Pro'],
+				'source-serif': ['"Source Serif Pro"'],
 				'source-mono': ['"Source Code Pro Variable"']
 			}
 
