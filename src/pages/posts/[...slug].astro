@@ -1,23 +1,27 @@
 ---
-import type { Params } from 'astro';
-import { getEntryBySlug } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
 import Title from "../../components/Title.astro";
-import type { Blog } from "../../content/config";
 
+export async function getStaticPaths() {
+	const blogEntries = await getCollection("blog");
+	return blogEntries.map((entry) => ({
+		params: { slug: entry.slug },
+		props: { entry },
+	}));
+}
 
-const { slug } = Astro.params as Params;
-// 2. Query for the entry directly using the request slug
-const entry = (await getEntryBySlug("blog", slug!)) as Blog;
-// 3. (Optional) render the entry to HTML in the template
-const { Content } = await entry!.render();
+const { entry } = Astro.props;
+const { Content } = await entry.render();
 ---
 
 <Layout title={entry.data.title}>
 	<div class="max-w-4xl mx-auto">
 		<Title>{entry?.data.title}</Title>
-		<div class="font-source-serif text-base md:text-lg p-6 space-y-4 text-justify">
+		<div
+			class="font-source-serif text-base md:text-lg p-6 space-y-4 text-justify"
+		>
 			<Content />
 		</div>
 	</div>

@@ -21,10 +21,7 @@ const shikiResourcePaths = Object.keys(
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), mdx()],
-  output: "server",
-	adapter: vercel({
-		includeFiles: shikiResourcePaths,
-	}),
+	output: "static",
 	markdown: {
 		shikiConfig: { theme: mochaTheme}
 	}
