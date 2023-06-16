@@ -18,8 +18,8 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 					>
 						{blogPostEntry.data.title}
 					</a>
-					<time datetime={blogPostEntry.data.publishDate.toISOString()}>
-						{blogPostEntry.data.publishDate.toDateString()}
+					<time datetime={blogPostEntry.data.publishDate.toLocaleDateString()}>
+						{blogPostEntry.data.publishDate.toLocaleDateString()}
 					</time>
 				</li>
 			))
