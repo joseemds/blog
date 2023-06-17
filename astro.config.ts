@@ -8,19 +8,14 @@ import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
-import mochaTheme from "./src/assets/themes/frappe.json"
+import mochaTheme from "./src/assets/themes/latte.json"
 import AutoImport from 'astro-auto-import';
 
 // https://github.com/withastro/astro/issues/5357#issuecomment-1314219452
-const shikiResourcePaths = Object.keys(
-	import.meta.glob([
-		"./node_modules/.pnpm/shiki@*/node_modules/shiki/languages/*.tmLanguage.json",
-		"./node_modules/.pnpm/shiki@*/node_modules/shiki/themes/*.json",
-	]),
-);
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://letrec.in',
 	integrations: [tailwind(
 		{
 			config: {applyBaseStyles: false}

@@ -1,5 +1,6 @@
 {
-	"name": "blog",
+	"name": "letrec.in",
+	"site": "letrec.in",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
