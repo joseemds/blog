@@ -9,6 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 import mdx from "@astrojs/mdx";
 import mochaTheme from "./src/assets/themes/frappe.json"
+import AutoImport from 'astro-auto-import';
 
 // https://github.com/withastro/astro/issues/5357#issuecomment-1314219452
 const shikiResourcePaths = Object.keys(
@@ -20,9 +21,16 @@ const shikiResourcePaths = Object.keys(
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx()],
+	integrations: [tailwind(
+		{
+			config: {applyBaseStyles: false}
+		}
+		), AutoImport({
+		imports: [
+		]
+	}), mdx()],
 	output: "static",
 	markdown: {
-		shikiConfig: { theme: mochaTheme}
-	}
+		shikiConfig: { theme: mochaTheme }
+	},
 });

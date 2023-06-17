@@ -1,79 +1,19 @@
-/* From https://www.joshwcomeau.com/css/custom-css-reset/  */
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+h1 {
+	@apply font-bold text-2xl md:text-3xl font-source-sans
 }
-/*
-  2. Remove default margin
-*/
-* {
-  margin: 0;
+
+h2, h3 {
+	@apply font-bold text-xl md:text-2xl font-source-sans
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
+
+pre {
+	@apply p-4;
 }
-/*
-  Typographic tweaks!
-  4. Add accessible line-height
-  5. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-/*
-  6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-  7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*
-  8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
+
 
 /* Shika related */
-code {
-  counter-reset: step;
-  counter-increment: step calc(var(--start, 1) - 1);
-}
-
-code .line::before {
-  content: counter(step);
-  counter-increment: step;
-  width: 1rem;
-  margin-right: 1.5rem;
-  display: inline-block;
-  text-align: right;
-  color: rgba(115, 138, 148, 0.4);
-}

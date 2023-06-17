@@ -11,6 +11,7 @@ specifiers:
   '@fontsource/iosevka': ^4.5.4
   '@fontsource/source-serif-pro': ^5.0.3
   astro: ^2.6.1
+  astro-auto-import: ^0.3.0
   class-variance-authority: ^0.4.0
   prettier: ^2.8.8
   shiki: ^0.14.1
@@ -27,6 +28,7 @@ dependencies:
   '@fontsource/iosevka': 4.5.4
   '@fontsource/source-serif-pro': 5.0.3
   astro: 2.6.3
+  astro-auto-import: 0.3.0_astro@2.6.3
   class-variance-authority: 0.4.0
   shiki: 0.14.1
   tailwindcss: 3.2.7
@@ -1001,6 +1003,10 @@ packages:
       '@types/unist': 2.0.6
     dev: false
 
+  /@types/node/18.16.18:
+    resolution: {integrity: sha512-/aNaQZD0+iSBAGnvvN2Cx92HqE5sZCPZtx2TsK+4nvV23fFe09jVDvpArXr2j9DnYlzuU9WuoykDDc6wqvpNcw==}
+    dev: false
+
   /@types/parse5/6.0.3:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
@@ -1184,6 +1190,17 @@ packages:
   /astring/1.8.4:
     resolution: {integrity: sha512-97a+l2LBU3Op3bBQEff79i/E4jMD2ZLFD8rHx9B6mXyB2uQwhJQYfiDqUwtfjF4QA1F2qs//N6Cw8LetMbQjcw==}
     hasBin: true
+    dev: false
+
+  /astro-auto-import/0.3.0_astro@2.6.3:
+    resolution: {integrity: sha512-EfpraN8R1K27ka+/qj3rsUXPf0Zd/74gZTP2IHd+4dvZsXeCEB/ZzxoxLG4QJ3n5Zpxh0uHiWFUcjomJLGWUEw==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      astro: ^2.0.0
+    dependencies:
+      '@types/node': 18.16.18
+      acorn: 8.8.2
+      astro: 2.6.3
     dev: false
 
   /astro/2.6.3:

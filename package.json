@@ -22,6 +22,7 @@
 		"@fontsource/iosevka": "^4.5.4",
 		"@fontsource/source-serif-pro": "^5.0.3",
 		"astro": "^2.6.1",
+		"astro-auto-import": "^0.3.0",
 		"class-variance-authority": "^0.4.0",
 		"shiki": "^0.14.1",
 		"tailwindcss": "^3.0.24"
