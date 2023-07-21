@@ -10,7 +10,7 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 <Layout>
 	<ul class="mt-16">
 		{
-			blogPosts.map((blogPostEntry) => (
+			blogPosts.reverse().map((blogPostEntry) => (
 				<li class="flex items-center justify-center flex-col">
 					<a
 						class="font-source-sans text-lg font-semibold"

@@ -1,0 +1,48 @@
+---
+title: "Setting up a local enviroment for C + OpenGL development using Nix"
+tags: nix c opengl
+draft: false
+publishDate: "2023-07-20"
+---
+
+## Introduction
+
+	I decided to read [Learn OpenGL](https:://learnopengl.com), so the first logical step was... setup the project! And... handling C projects can be a bit painful?
+	I am not a C expert (neither a Nix expert), but i already saw a few C projects, a lot of than handle dependencies differently, vendoring, installing directly into your system..., and choose between Make, CMake and others that i didnt even know that existed was a bit overwhelming. Then i thought, why not try something more familiar!? A played with nix a bit and it seems a perfect fit for this task.
+
+## But what is Nix?
+
+
+## Setting up the development enviroment
+
+```nix
+{
+  inputs.flake-utils.url = "github:numtide/flake-utils";
+  outputs = { self, nixpkgs, flake-utils }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        inherit (pkgs) lib;
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
+        defaultPackage = pkgs.hello;
+        devShells.default = pkgs.mkShell {
+          buildInputs = with pkgs; [
+            glfw
+            freeglut
+            libGLU
+            glew
+            xorg.libX11
+            xorg.libXrandr
+            xorg.libXi
+            libGL
+            glm
+						mesa.drivers
+						glxinfo
+          ];
+        };
+        formatter = pkgs.nixpkgs-fmt;
+      }
+    );
+}
+```

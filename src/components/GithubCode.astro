@@ -32,6 +32,24 @@ const [startLine, _endLine] = lineNumbers.replace("L", "").split("-");
 		</h4>
 	</div>
 	<div class="rounded-b-lg overflow-hidden text-sm md:text-base" style="border-color: #30363d; font-family: Iosevka;">
-		<Code	code={code} lang="js" />
+		<Code class:list=[]	code={code} lang="js" />
 	</div>
 </div>
+
+<style is:global>
+/* Shika related */
+code {
+  counter-reset: step;
+  counter-increment: step calc(var(--start, 1) - 1);
+}
+
+code .line::before {
+  content: counter(step);
+  counter-increment: step;
+  width: 1rem;
+  margin-right: 1.5rem;
+  display: inline-block;
+  text-align: right;
+  color: rgba(115, 138, 148, 0.4);
+}
+</style>

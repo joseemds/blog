@@ -1,8 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
-
 import Title from "../../components/Title.astro";
+import MarkdownLayout from "../../layouts/MarkdownLayout.astro";
 
 export async function getStaticPaths() {
 	const blogEntries = await getCollection("blog");
@@ -16,15 +15,13 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={entry.data.title}>
+<MarkdownLayout title={entry.data.title}>
 	<div class="max-w-4xl mx-auto">
 		<Title>{entry?.data.title}</Title>
-		<div
-			class="font-source-serif p-6 text-justify"
-		>
-			<article class=".post space-y-4">
+		<div class="font-source-serif p-6 text-justify">
+			<article class="space-y-4">
 				<Content />
 			</article>
 		</div>
 	</div>
-</Layout>
+</MarkdownLayout>

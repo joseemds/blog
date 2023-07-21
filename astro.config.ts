@@ -18,10 +18,11 @@ export default defineConfig({
 	site: 'https://letrec.in',
 	integrations: [tailwind(
 		{
-			config: {applyBaseStyles: false}
+			config: { applyBaseStyles: false }
 		}
-		), AutoImport({
+	), AutoImport({
 		imports: [
+			{ './src/components/Title.astro': [['default', 'h2']] }
 		]
 	}), mdx()],
 	output: "static",

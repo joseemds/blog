@@ -1,0 +1,16 @@
+---
+import Layout from "./Layout.astro";
+
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+	<slot />
+</Layout>
+
+<style is:global>
+	h2 {
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+	}
+</style>
