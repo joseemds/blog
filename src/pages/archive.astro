@@ -1,25 +1,26 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 
 const blogPosts = await getCollection("blog", ({ data }) => {
-	return data.draft !== true;
+	const isDev = import.meta.env.DEV;
+	return isDev || data.draft !== true;
 });
 ---
 
 <Layout>
 	<ul class="mt-16">
 		{
-			blogPosts.map((blogPostEntry) => (
+			blogPosts.reverse().map((blogPostEntry) => (
 				<li class="flex items-center justify-center flex-col">
 					<a
-						class="font-source-sans text-lg font-semibold"
+						class="font-source-sans text-lg font-semibold text-balance"
 						href={`/posts/${blogPostEntry.slug}`}
 					>
 						{blogPostEntry.data.title}
 					</a>
-					<time datetime={blogPostEntry.data.publishDate.toLocaleDateString()}>
-						{blogPostEntry.data.publishDate.toLocaleDateString()}
+					<time datetime={blogPostEntry.data.publishDate.toISOString()}>
+						{blogPostEntry.data.publishDate.toDateString()}
 					</time>
 				</li>
 			))
