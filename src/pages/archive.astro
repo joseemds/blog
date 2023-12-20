@@ -14,7 +14,7 @@ const blogPosts = await getCollection("blog", ({ data }) => {
 			blogPosts.reverse().map((blogPostEntry) => (
 				<li class="flex items-center justify-center flex-col">
 					<a
-						class="font-source-sans text-lg font-semibold text-balance"
+						class="font-source-sans text-md md:text-lg font-semibold text-balance text-center"
 						href={`/posts/${blogPostEntry.slug}`}
 					>
 						{blogPostEntry.data.title}
